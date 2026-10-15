@@ -1,0 +1,9 @@
+Employés : {"employee":[{"id":1,"name":"Ali","salary":9000},{"id":2,"name":"Kamal","salary":22000},{"id":3,"name":"Amal","salary":23000}]}
+┌─────────┬─────────┬───────┬───────────┬───────────┐
+│ (index) │ format  │ bytes │ encode_ms │ decode_ms │
+├─────────┼─────────┼───────┼───────────┼───────────┤
+│ 0       │ 'json'  │ 127   │ 0.014551  │ 0.027142  │
+│ 1       │ 'xml'   │ 224   │ 0.632764  │ 2.570852  │
+│ 2       │ 'proto' │ 41    │ 0.451802  │ 1.420071  │
+└─────────┴─────────┴───────┴───────────┴───────────┘
+Décodage JSON, XML et Protobuf : données identiques à la source.

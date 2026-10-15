@@ -1,0 +1,4 @@
+* text=auto eol=lf
+screenshots/** -text
+evidence/** -text
+data.proto -text

@@ -1,0 +1,43 @@
+TAP version 13
+# Employés : {"employee":[{"id":1,"name":"Ali","salary":9000},{"id":2,"name":"Kamal","salary":22000},{"id":3,"name":"Amal","salary":23000}]}
+# ┌─────────┬─────────┬───────┬───────────┬───────────┐
+# │ (index) │ format  │ bytes │ encode_ms │ decode_ms │
+# ├─────────┼─────────┼───────┼───────────┼───────────┤
+# │ 0       │ 'json'  │ 127   │ 0.061825  │ 0.133959  │
+# │ 1       │ 'xml'   │ 224   │ 0.60309   │ 1.471478  │
+# │ 2       │ 'proto' │ 41    │ 0.525635  │ 0.915206  │
+# └─────────┴─────────┴───────┴───────────┴───────────┘
+# Décodage JSON, XML et Protobuf : données identiques à la source.
+# Subtest: les trois formats restituent les employés, y compris les accents et caractères XML
+ok 1 - les trois formats restituent les employés, y compris les accents et caractères XML
+  ---
+  duration_ms: 13.973211
+  type: 'test'
+  ...
+# Subtest: les types et les bornes int32 sont vérifiés avant encodage
+ok 2 - les types et les bornes int32 sont vérifiés avant encodage
+  ---
+  duration_ms: 0.530945
+  type: 'test'
+  ...
+# Subtest: les tailles mesurées correspondent aux vrais fichiers et le binaire se relit
+ok 3 - les tailles mesurées correspondent aux vrais fichiers et le binaire se relit
+  ---
+  duration_ms: 11.535125
+  type: 'test'
+  ...
+# Subtest: une liste vide reste une liste vide dans les trois formats
+ok 4 - une liste vide reste une liste vide dans les trois formats
+  ---
+  duration_ms: 0.465101
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2122.326834
